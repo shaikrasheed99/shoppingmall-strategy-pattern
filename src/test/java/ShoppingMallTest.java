@@ -9,7 +9,7 @@ public class ShoppingMallTest {
     @Nested
     class WithStrategyPattern {
         @Test
-        void shouldGiveTheNoDiscountBillWhenAmountIsGiven() {
+        void shouldGiveNoDiscountBillAmountWhenAmountIsGiven() {
             double amount = 1000;
             ShoppingMall shoppingMall = new ShoppingMall(amount);
             double expectedBillAmount = 1000;
@@ -22,7 +22,7 @@ public class ShoppingMallTest {
         }
 
         @Test
-        void shouldGiveMondayDiscountBillWhenAmountIsGiven() {
+        void shouldGiveMondayDiscountBillAmountWhenAmountIsGiven() {
             double amount = 1000;
             ShoppingMall shoppingMall = new ShoppingMall(amount);
             MondayDiscountStrategy mondayDiscountStrategy = new MondayDiscountStrategy();
@@ -35,7 +35,7 @@ public class ShoppingMallTest {
         }
 
         @Test
-        void shouldGiveSundayDiscountBillWhenAmountIsGiven() {
+        void shouldGiveSundayDiscountBillAmountWhenAmountIsGiven() {
             double amount = 1000;
             ShoppingMall shoppingMall = new ShoppingMall(amount);
             SundayDiscountStrategy sundayDiscountStrategy = new SundayDiscountStrategy();
