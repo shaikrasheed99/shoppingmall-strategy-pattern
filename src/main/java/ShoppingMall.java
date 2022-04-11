@@ -6,8 +6,9 @@ public class ShoppingMall {
     }
 
     public double getBill(String discountString) {
-        if (discountString.equals("NO")) {
-            return amount;
+        switch (discountString) {
+            case "NO" : return 0;
+            case "Monday" : return amount * 0.5;
         }
         return 0;
     }

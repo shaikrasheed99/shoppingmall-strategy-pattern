@@ -16,4 +16,16 @@ public class ShoppingMallTest {
 
         assertThat(actualBillAmount, is(equalTo(expectedBillAmount)));
     }
+
+    @Test
+    void shouldGiveMondayDiscountBillWhenAmountIsGiven() {
+        double amount = 1000;
+        ShoppingMall shoppingMall = new ShoppingMall(amount);
+        String discountString = "Monday";
+        double expectedBillAmount = 500;
+
+        double actualBillAmount = shoppingMall.getBill(discountString);
+
+        assertThat(actualBillAmount, is(equalTo(expectedBillAmount)));
+    }
 }
