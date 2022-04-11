@@ -33,5 +33,18 @@ public class ShoppingMallTest {
 
             assertThat(actualBillAmount, is(equalTo(expectedBillAmount)));
         }
+
+        @Test
+        void shouldGiveSundayDiscountBillWhenAmountIsGiven() {
+            double amount = 1000;
+            ShoppingMall shoppingMall = new ShoppingMall(amount);
+            SundayDiscountStrategy sundayDiscountStrategy = new SundayDiscountStrategy();
+            double expectedBillAmount = 750;
+
+            shoppingMall.setDiscountStrategy(sundayDiscountStrategy);
+            double actualBillAmount = shoppingMall.getBill();
+
+            assertThat(actualBillAmount, is(equalTo(expectedBillAmount)));
+        }
     }
 }

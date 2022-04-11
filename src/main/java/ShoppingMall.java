@@ -6,11 +6,11 @@ public class ShoppingMall {
         this.amount = amount;
     }
 
-    public double getBill() {
-        return discountStrategy.calculate(amount);
-    }
-
     public void setDiscountStrategy(IDiscountStrategy discountStrategy) {
         this.discountStrategy = discountStrategy;
+    }
+
+    public double getBill() {
+        return discountStrategy.calculate(amount);
     }
 }
