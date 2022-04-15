@@ -13,7 +13,7 @@
 
 <br/>
 
-![](class-diagrams/shopping-mall-strategy-pattern.drawio.png)
+![](class-diagrams/shopping-mall-strategy-pattern.png)
 
 <br/>
 
