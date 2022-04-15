@@ -3,7 +3,7 @@ package com.tw.student;
 import com.tw.student.exceptions.NegativeGradeException;
 
 public class Student {
-    private IWritingStrategy writeWith;
+    private final IWritingStrategy writeWith;
 
     public Student(int grade) throws NegativeGradeException {
         if (grade < 0) throw new NegativeGradeException();
@@ -11,6 +11,8 @@ public class Student {
             writeWith = new SlatePencilStrategy();
         } else if (grade <= 5) {
             writeWith = new PencilStrategy();
+        } else {
+            writeWith = new PenStrategy();
         }
     }
 

@@ -25,4 +25,11 @@ public class StudentTest {
 
         assertEquals("I'm writing with pencil", student.write());
     }
+
+    @Test
+    void shouldWriteWithPenWhenGradeIsMoreThanFive() throws NegativeGradeException {
+        Student student = new Student(7);
+
+        assertEquals("I'm writing with pen", student.write());
+    }
 }
