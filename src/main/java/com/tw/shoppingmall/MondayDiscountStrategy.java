@@ -1,3 +1,5 @@
+package com.tw.shoppingmall;
+
 public class MondayDiscountStrategy implements IDiscountStrategy {
     @Override
     public double calculate(double amount) {

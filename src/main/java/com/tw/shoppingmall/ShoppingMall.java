@@ -1,3 +1,5 @@
+package com.tw.shoppingmall;
+
 public class ShoppingMall {
     private final double amount;
     IDiscountStrategy discountStrategy;
