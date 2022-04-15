@@ -16,6 +16,13 @@ public class StudentTest {
     void shouldWriteWithSlatePencilWhenGradeIsLessThanOrEqualTwo() throws NegativeGradeException {
         Student student = new Student(2);
 
+        assertEquals("I'm writing with slate pencil", student.write());
+    }
+
+    @Test
+    void shouldWriteWithPencilWhenGradeIsLessThanOrEqualToFiveAndGreaterThanTwo() throws NegativeGradeException {
+        Student student = new Student(4);
+
         assertEquals("I'm writing with pencil", student.write());
     }
 }
