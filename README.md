@@ -5,4 +5,4 @@
 * Based on the week day, the shopping mall should give discounts at any point of time.
 * Now strategy pattern is used, whenever a shopping mall needs a particular discount during run time.
 
-![](shopping-mall-strategy-pattern.drawio.png)
+![](class-diagrams/shopping-mall-strategy-pattern.drawio.png)
